@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>glimpse</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./assets/css/base.css">
+        <link rel="stylesheet" href="./assets/css/poto.css">
+        <link rel="stylesheet" href="./assets/css/responsive/responsive_poto.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" />   
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="grid">
+                <div class="header row">
+                    <div class="logo">                                  
+                        <h1><a href="./showcase.html">glimpse</a></h1>
+                    </div>
+
+                    <div class="profile-acc">
+                        <div class="sign-in">
+                            <a href="./sign_in.html"><i class="fa-regular fa-circle-user sign-icon"></i></a>
+                            <h2 class="sign-text"><a href="./sign_in.html">Sign In</a></h2>
+                        </div>
+                        <div class="sign-ined">
+                            <i class="fa-solid fa-plus sign-ined-icon" id="icon-add-image"></i>
+                            <i class="fa-solid fa-bell sign-ined-icon"></i>                            
+                            <div class="sign-ined-dropdown">
+                                <div class="sign-ined-avatar">
+                                    <img src="./assets/image/user/avt2.jpg">
+                                </div>
+                                <i class="fa-solid fa-chevron-down sign-ined-drop"></i>
+                                <div class="sign-ined-droplist">
+                                    <ul>
+                                        <a href="./profile.html"><li>Trang cá nhân</li></a>
+                                        <a href="./edit_profile.html"><li>Thông tin cá nhân</li></a>
+                                        <li class="sign-out-btn">Đăng xuất</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="infor">
+                    <div class="infor-item">
+                        <div class="infor-img">
+                            <img src="../assets/image/photo/index/ai1.jpg" alt="" onload="onLoadImg()" id="wh">
+                        </div>
+                        
+                        <div class="infor-dec">
+                            <div class="infor-first">
+                                <div class="infor-dec-add" onclick="btnAction()">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                    <ul class="infor-dec-drop">
+                                        <li>Save</li>
+                                        <li>Download</li>
+                                        <li>Share</li>
+                                        <a href="/play.html"><li>Play</li></a>
+                                    </ul>
+                                </div>
+                                <div class="infor-dec-title">
+                                    <h1>My Art</h1>                            
+                                    <p>JANGCHOI Apa jadinya hidup Wonyoung yang suram dan membosankan berubah saat bertemu dengan pemuda misterius entah darimana asalnya. Gender Switch</p>
+                                </div>
+                                <div class="infor-dec-name">
+                                    <img src="../assets/image/user/avt1.jpg" alt="">
+                                    <p>Hpow</p>
+                                    <i class="fa-solid fa-user-plus"></i>
+                                </div>
+                            </div>
+                            <div class="infor-dec-about">
+                                <div class="infor-dec-about-item">
+                                    <i class="fa-regular fa-calendar"></i> Oct 5, 2022
+                                </div>
+                                <div class="infor-dec-about-item">
+                                    <i class="fa-solid fa-pen-ruler"></i> 1024 x 1024
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="back-home">
+                        <i class="fa-solid fa-arrow-left icon-back-home"></i>
+                    </div>
+                </div>
+
+                <div class="related-text">Explore Related</div>
+                <div class="related columm-count-5">
+                    <div class="relates-item">
+                        <div class="showcase-item">
+                            <div class="showcase-img">
+                                <img src="../assets/image/photo/index/ai2.png">
+                                <div class="showcase-item-info">
+                                </div>     
+                                <div class="showcase-save">Save</div>
+                                <div class="showcase-extend">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                    <div class="showcase-extend-select">
+                                        <p>Download</p>
+                                        <p>Hide photo</p>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>                        
+                    </div>
+                    <div class="relates-item">
+                        <div class="showcase-item">
+                            <div class="showcase-img">
+                                <img src="../assets/image/photo/index/ai3.jpg">
+                                <div class="showcase-item-info">
+                                </div>     
+                                <div class="showcase-save">Save</div>
+                                <div class="showcase-extend">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                    <div class="showcase-extend-select">
+                                        <p>Download</p>
+                                        <p>Hide photo</p>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>                        
+                    </div>
+                    <div class="relates-item">
+                        <div class="showcase-item">
+                            <div class="showcase-img">
+                                <img src="../assets/image/photo/index/ai4.png">
+                                <div class="showcase-item-info">
+                                </div>     
+                                <div class="showcase-save">Save</div>
+                                <div class="showcase-extend">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                    <div class="showcase-extend-select">
+                                        <p>Download</p>
+                                        <p>Hide photo</p>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>                        
+                    </div>
+                    <div class="relates-item">
+                        <div class="showcase-item">
+                            <div class="showcase-img">
+                                <img src="../assets/image/photo/index/ai5.jpg">
+                                <div class="showcase-item-info">
+                                </div>     
+                                <div class="showcase-save">Save</div>
+                                <div class="showcase-extend">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                    <div class="showcase-extend-select">
+                                        <p>Download</p>
+                                        <p>Hide photo</p>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>                        
+                    </div>
+                    <div class="relates-item">
+                        <div class="showcase-item">
+                            <div class="showcase-img">
+                                <img src="../assets/image/photo/index/ai6.jpg">
+                                <div class="showcase-item-info">
+                                </div>     
+                                <div class="showcase-save">Save</div>
+                                <div class="showcase-extend">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                    <div class="showcase-extend-select">
+                                        <p>Download</p>
+                                        <p>Hide photo</p>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>                        
+                    </div>
+                    <div class="relates-item">
+                        <div class="showcase-item">
+                            <div class="showcase-img">
+                                <img src="../assets/image/photo/index/ai7.jpg">
+                                <div class="showcase-item-info">
+                                </div>     
+                                <div class="showcase-save">Save</div>
+                                <div class="showcase-extend">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                    <div class="showcase-extend-select">
+                                        <p>Download</p>
+                                        <p>Hide photo</p>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>                        
+                    </div>
+                    <div class="relates-item">
+                        <div class="showcase-item">
+                            <div class="showcase-img">
+                                <img src="../assets/image/photo/index/ai8.jpg">
+                                <div class="showcase-item-info">
+                                </div>     
+                                <div class="showcase-save">Save</div>
+                                <div class="showcase-extend">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                    <div class="showcase-extend-select">
+                                        <p>Download</p>
+                                        <p>Hide photo</p>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal_download">
+                <div class="modal_overload"></div>
+
+                <div class="download_body">
+                    <div class="download_img"></div>
+                    
+                    <div class="download-cut">
+                        <div class="sizes">
+                            <div class="column_width">
+                                <label for="">Width</label>
+                                <input type="text" name="width" id="width" value="">
+                            </div>
+                            <div class="column_height">
+                                <label for="">Height</label>
+                                <input type="text" name="height" id="height" value="">
+                            </div>  
+                        </div>     
+                        <div class="column_check">
+                            <input type="checkbox" id="ratio" checked>
+                            <label for="">Khoá tỉ lệ khung hình</label>
+                        </div>
+                        <button>Download</button>
+                    </div>
+                </div>
+                
+                <div class="download_view"></div>
+            </div>
+
+            <div class="modal">
+                <div class="modal_overlay"></div>
+
+                <div class="modal_body">
+                    <div class="modal_inner">
+                        <div class="modal_image">
+                            <div class="modal_border">
+                                <img src="" alt="" class="modal_border_img">
+                            </div>
+                        </div>     
+                        <div class="modal_type">
+                            <i class="fa-solid fa-x modal_icon_close"></i>                   
+                            <form action="" class="modal_form" id="modal_upload_form" enctype="multipart/form-data">                                
+                                <input type="file" name="link" id="inpFile" class="modal_input link">
+                                <input type="text" class="modal_input" placeholder="Tiêu đề" name="title">
+                                <textarea class="modal_textarea" placeholder="Giới thiệu về ảnh" name="description"></textarea>
+                                <input type="text" class="modal_input" placeholder="Chủ đề" name="genre">
+                                <button class="modal_button">Thêm</button>                            
+                            </form>    
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="toast-mess">
+            </div>
+
+            <a href="#">
+                <div class="scroll-top">
+                    <i class="fa-solid fa-arrow-up"></i>    
+                </div>
+            </a> 
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+        <script src="./assets/js/poto.js"></script>
+    </body>
+</html>

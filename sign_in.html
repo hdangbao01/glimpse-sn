@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>glimpse</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./assets/css/base.css">
+        <link rel="stylesheet" href="./assets/css/sign_in.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">    
+    </head>
+
+    <body>        
+        <div class="main">
+            <div class="grid">
+                <div class="header">
+                    <div class="logo">                              
+                        <h1><a href="./showcase.html">glimpse</a></h1>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="sign-in">
+                        <form action="" method="POST" class="form-lg" id="form-lg">
+                            <div class="sign-in_header">
+                                <h1>Welcome to glimpse</h1>
+                                <p>Login to continue</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input id="email" type="text" name="email" placeholder="Email!" class="form-control">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input id="password" type="password" name="password" placeholder="Password!" class="form-control">
+                                <span class="form-message"></span>
+                            </div>
+                            <p class="text-message-submit">
+                                <!-- <i class="fa-solid fa-triangle-exclamation"></i> -->
+                            </p>
+                            <button class="form-submit">Log in</button>                                               
+                        </form>
+                        <p>OR</p> 
+                        <div class="link">
+                            <div class="link-fb">
+                                <i class="fa-brands fa-facebook"></i>
+                                Continue with Facebook
+                            </div>
+                            <div class="link-gg">
+                                <i class="fa-brands fa-google"></i>
+                                Continue with Google
+                            </div>
+                        </div>
+                        <div class="switch-sign">
+                            Do not have an account? <a href="#" class="switch-log-in-btn">Sign up</a>
+                        </div>
+                    </div>
+
+                    <div class="sign-up">
+                        <form action="" method="POST" class="form-si" id="form-si">
+                            <div class="sign-in_header">
+                                <h1>Welcome to glimpse</h1>
+                                <p>Sign up to continue</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="form-label">Họ tên</label>
+                                <input id="name" type="text" name="name" placeholder="Họ tên!" class="form-control">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input id="email" type="text" name="email" placeholder="Email!" class="form-control">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input id="password" type="password" name="password" placeholder="Password!" class="form-control">
+                                <span class="form-message"></span>
+                            </div>
+                            <p class="text-message-signup">
+                                <!-- <i class="fa-solid fa-triangle-exclamation"></i> -->
+                            </p>
+                            <button class="form-submit">Sign up</button>                                               
+                        </form>
+                        <p>OR</p> 
+                        <div class="link">
+                            <div class="link-fb">
+                                <i class="fa-brands fa-facebook"></i>
+                                Continue with Facebook
+                            </div>
+                            <div class="link-gg">
+                                <i class="fa-brands fa-google"></i>
+                                Continue with Google
+                            </div>
+                        </div>
+                        <div class="switch-sign">
+                            Do have an account? <a href="#" class="switch-sign-up-btn">Log in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="snow"></div>
+        </div>
+
+        <script src="./assets/js/snow.js"></script>
+        <script src="./assets/js/validation.js"></script>
+        <script src="./assets/js/sign_in.js"></script>
+        <script>
+            Validator({
+                form: '#form-lg',
+                errorSelector: '.form-message',
+                formGroupSelector: '.form-group',
+                rules: [
+                    Validator.isRequired('#email'),
+                    Validator.isEmail('#email'),
+                    Validator.isRequired('#password'),
+                    Validator.minLength('#password', 6)
+                ]
+                // onSubmit: function (data) {
+                //     const userApi = 'http://localhost:3000/user'
+                //     const storageLogin = 'userLogin'
+                //     const email = data.email
+                //     const password = data.password
+                //     const textmessageSubmit = $('.text-message-submit')               
+
+                //     function getUser(cb) {
+                //         fetch(userApi)
+                //             .then(function(response) {
+                //                 return response.json()
+                //             })        
+                //             .then(cb)
+                //     }
+
+                //     function handleLogin(data) {
+                //         const resultData = data.some(function(data) {
+                //             return (data.email == email && data.password == password)
+                //         })
+
+                //         if (resultData) {
+                //             localStorage.setItem(storageLogin, email)
+                //             window.location.href = "./showcase.html"
+                //         } else {
+                //             textmessageSubmit.innerText = 'Thông tin không chính xác. Vui lòng nhập lại!'
+                //             textmessageSubmit.style.margin = "10px 40px"
+                //         }
+                //     }
+
+                //     getUser(handleLogin)
+                // }
+            })
+
+            Validator({
+                form: '#form-si',
+                errorSelector: '.form-message',
+                formGroupSelector: '.form-group',
+                rules: [
+                    Validator.isRequired('#name'),
+                    Validator.isRequired('#email'),
+                    Validator.isEmail('#email'),
+                    Validator.isRequired('#password'),
+                    Validator.minLength('#password', 6)
+                ]
+                // onSubmit: function (data) {                    
+                //     const userApi = 'http://localhost:3000/user'
+                //     const name = data.name
+                //     const email = data.email
+                //     const password = data.password
+                //     const textmessageSubmit = $('.text-message-signup')      
+
+                //     function getUser(cb) {
+                //         fetch(userApi)
+                //             .then(function(response) {
+                //                 return response.json()
+                //             })        
+                //             .then(cb)
+                //     }
+
+                //     function createUser(data) {
+                //         const options = {
+                //             method: 'POST',
+                //             headers: {
+                //                 'Content-Type': 'application/json'
+                //             },
+                //             body: JSON.stringify(data)
+                //         }
+                //         fetch(userApi, options)
+                //             .then(function (response) {
+                //                 response.json();
+                //             })
+                //     }
+
+                //     function handleLogin(data) {
+                //         const resultData = data.some(function(data) {
+                //             return (data.email == email)
+                //         })
+
+                //         if (resultData) {
+                //             textmessageSubmit.innerText = 'Email đã tồn tại. Vui lòng nhập lại!'
+                //             textmessageSubmit.style.margin = "10px 40px"
+                //         } else {
+                //             handleCreateForm()
+                //         }
+                //     }
+
+                //     function handleCreateForm() {
+                //         const formData = {
+                //             name: name,
+                //             email: email,
+                //             password: password,
+                //             username: "",
+                //             avatar: "default-user.png",
+                //             phone: "",
+                //             sex: ""
+                //         }
+                //         if(name != "" && email != "" && password != "") {
+                //             createUser(formData)
+                //             alert("Đăng ký thành công!")
+                //             window.location.reload()                              
+                //         }
+                //     }
+
+                //     getUser(handleLogin)                    
+                // }
+            })
+        </script>
+    </body>
+</html>

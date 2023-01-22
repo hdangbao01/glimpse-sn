@@ -1,0 +1,192 @@
+#snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+@keyframes move {
+    0% {
+        opacity: 0;
+        transform: translate(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(50vh);
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(to right, #0c2c3b, #010f1d);
+    position: relative;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+
+.header {
+    z-index: 10;
+    position: absolute;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.logo a {
+    color: var(--text-color);
+    text-decoration: none;    
+}
+
+.logo h1 {
+    font-family: "Photograph";
+    font-size: 5rem;
+}
+
+.logo h1:hover {
+    text-decoration: underline;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sign-in {
+    z-index: 10;
+    margin: 0 auto;
+    width: 450px;
+    background-color: rgb(27, 27, 27);
+    text-align: center;
+    border-radius: 5px;
+    display: block;
+}
+
+.sign-up {
+    z-index: 10;
+    margin: 0 auto;
+    width: 450px;
+    background-color: rgb(27, 27, 27);
+    text-align: center;
+    border-radius: 5px;
+    display: none;
+}
+
+.sign-in_header {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.sign-in_header p {
+    font-size: 1.6rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 270px;
+    margin: 0 auto;
+    border: none;
+}
+
+.invalid .form-control {
+    border: 2px solid red;
+}
+
+.invalid .form-message {
+    color: red;
+}
+
+.form-message {
+    margin: 5px 2px;
+    font-size: 1.2rem;
+}
+
+.form-label {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 7px 0;
+}
+
+.form-control {
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #002d44;
+    font-size: 1.4rem;
+    padding: 11px 12px;
+}
+
+.text-message-submit,
+.text-message-signup {
+    font-size: 1.4rem;
+    color: red;
+    margin: 0;
+}
+
+.form-submit {
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: 1px solid #002d44;
+}
+
+.link {
+    width: 270px;
+    margin: 0 auto;
+}
+
+.link-fb,
+.link-gg {
+    cursor: pointer;
+    padding: 11px 12px;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.link-fb i,
+.link-gg i {
+    float: left;
+}
+
+.link-fb {
+    background-color: #0074e8;
+}
+
+.link-gg {
+    border: 1px solid #002d44;
+    background-color: white;
+    color: black;
+}
+
+.switch-sign {
+    font-size: 1.4rem;
+    margin: 20px 0;
+}
+
+.switch-sign a {
+    text-decoration: none;
+    color: #0074e8;
+}
+
+.switch-sign a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,290 @@
+:root {
+    --main-color: #031322;
+    --button-color: #023e5a;
+    --hover-color: #06466344;
+    --text-color: white;
+    --text-dark: rgb(8 11 22);
+    --button-light: rgb(226, 240, 248);
+}
+
+@font-face {
+    font-family: "Photograph";
+    src: url(../fonts/Photograph\ Signature.ttf) format('truetype');
+    font-weight: bold;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+/* SCROLLBAR */
+body::-webkit-scrollbar {
+    width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--button-color);
+}
+body::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* GRID LAYOUT */
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.columm-2_5 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 20%;
+}
+
+.columm-count-5 {
+    position: relative;
+    column-count: 5;
+}
+
+.columm-count-4 {
+    position: relative;
+    column-count: 4;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    z-index: 3;
+}
+
+.modal_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_body {
+    position: relative;
+    z-index: 10;
+    margin: auto;
+    background-color: #002b41;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px 1px #002d44;
+    animation: fadeIn .5s ease;
+}
+
+.modal_inner {
+    display: flex;
+}
+
+.modal_form {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 20px 30px;
+}
+
+.modal_image {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    background-color: #002b41;
+    border-radius: 15px 0 0 15px;
+}
+
+.modal_border {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    margin: 20px;
+    border: 1px dashed rgb(255, 255, 255);
+}
+
+.modal_border img {
+    width: 100%;
+}
+
+.modal_button {
+    float: right;
+    background-color: rgb(235 248 255); 
+    width: 70px;  
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 7px; 
+    padding-top: 9px;
+    color: rgb(8 11 22);
+    border: none;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+
+.modal_button:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+.modal_input,
+.modal_textarea {
+    width: 100%;
+    color: var(--text-color);
+    margin: 10px 0;
+    font-size: 1.4rem;
+    padding: 7px 7px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+}
+
+.modal_textarea {
+    height: 40px;
+    line-height: 22px;
+    resize: none;
+}
+
+.modal_input::placeholder,
+.modal_textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.modal_textarea::-webkit-scrollbar {
+    width: 0;
+}
+
+.modal_input.link {
+    border: none;
+}
+
+.modal_icon_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin: 20px;
+}
+
+.modal_type {
+    margin: 20px 0;
+}
+
+/* SIGN-INED */
+.sign-ined-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.sign-ined-avatar img {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    border: 2px solid white;
+}
+
+.sign-ined-drop {
+    cursor: pointer;
+    color: var(--text-color);
+    margin-left: 8px;
+    padding: 2px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+
+.sign-ined-drop:hover {
+    background-color: var(--button-color);
+}
+
+.sign-ined-droplist.active {
+    display: block;
+}
+
+.sign-ined-droplist {
+    z-index: 2;
+    position: absolute;
+    top: 45px;
+    right: -30px;
+    background-color: white;
+    border-radius: 10px;
+    display: none;
+}
+
+.sign-ined-droplist ul {
+    border-radius: 10px;
+    list-style: none;  
+    padding: 0;
+    margin: 0;
+}
+
+.sign-ined-droplist ul li {
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.sign-ined-droplist ul li:hover {
+    background-color: var(--button-light);
+}
+
+.sign-ined-droplist ul,
+.sign-ined-droplist ul a {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.sign-ined-droplist ul a {
+    text-decoration: none;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 15px 18px;
+    background-color: #002b41;
+    cursor: pointer;    
+    font-size: 2.6rem;
+    color: var(--text-color);
+    border-radius: 30px;
+    opacity: 0;
+    transition: all .4s;
+}

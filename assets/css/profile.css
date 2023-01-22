@@ -1,0 +1,331 @@
+.main {
+    background: var(--main-color);
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-ined-droplist {
+    top: 60px;
+}
+
+.sign-ined-icon {
+    cursor: pointer;
+    color: var(--text-color);
+    padding-bottom: 4px;
+    padding-right: 30px;
+    font-size: 2.2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.logo a {
+    color: var(--text-color);
+    text-decoration: none;    
+}
+
+.logo h1 {
+    font-family: "Photograph";
+    font-size: 5rem;
+    margin: 20px 0;
+}
+
+.logo h1:hover {
+    text-decoration: underline;
+}
+
+.profile-acc {
+    display: flex;
+}
+
+.profile-acc-mana {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.profile-img img {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    border: 2px solid white;
+}
+
+.profile-icon-item,
+.profile-icon {
+    cursor: pointer;
+    color: var(--text-color);
+    padding-bottom: 4px;
+}
+
+.profile-icon-item {
+    padding-right: 30px;
+    font-size: 2.2rem;
+}
+
+.profile-icon {
+    padding-left: 10px;
+    font-size: 1.3rem;
+}
+
+.profile {
+    color: var(--text-color);
+    padding: 50px;
+}
+
+.profile-avt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-avt-first {
+    display: flex;    
+    align-items: center;
+}
+
+.profile-avt-first img {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    border: 3px solid rgba(52,57,106,.6);
+}
+
+.profile-avt-first h1 {
+    padding-left: 20px;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.profile-edit {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    border: 2px solid rgb(203 213 225);
+    border-radius: 20px;
+}
+
+.profile-edit a {
+    color: rgb(203 213 225);
+    text-decoration: none;
+}
+
+.profile-edit:hover a {
+    cursor: pointer;
+    color: white;
+}
+
+.profile-follow {
+    display: flex;
+    padding: 25px 0;
+    font-size: 1.4rem;
+    color: rgb(203 213 225);
+    font-weight: 500;
+}
+
+.profile-following {
+    padding-right: 20px;
+}
+
+.profile-following i,
+.profile-follower i {
+    padding-right: 3px;
+}
+
+.profile-following:hover,
+.profile-follower:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.select {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(203 213 225);
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding-bottom: 20px;
+}
+
+.select-type {
+    display: flex;
+}
+
+.select-item {
+    margin: 0 5px;
+    padding: 12px 15px;   
+    border-radius: 40px;
+}
+
+.select-item:hover {
+    cursor: pointer;
+    background-color: rgb(53 65 83);
+    color: var(--text-color);
+}
+
+.select-item.active {
+    background-color: rgb(53 65 83);
+    color: var(--text-color);
+}
+
+.select-filter-item {
+    padding: 12px 15px; 
+    border-radius: 10px;
+}
+
+.select-filter-item i {
+    padding-left: 5px;
+}
+
+.select-filter-item:hover {
+    cursor: pointer;
+    background-color: rgb(53 65 83);
+    color: var(--text-color);
+}
+
+.row1 {
+    display: none;
+}
+
+.row2 {
+    display: flex;
+}
+
+.row3 {
+    display: none;
+}
+
+.album {
+    padding: 10px 0;
+    padding-bottom: 50px;
+}
+
+.album-item {
+    color: white;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.album-item img {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.album-dec {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.album-dec-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.album-dec-about {
+    display: flex;
+}
+
+.album-dec-title {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.album-dec-title h1 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.album-dec-about p {
+    padding-right: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.album-dec-photo {
+    color: rgba(203, 213, 225);
+}
+
+.album-dec-time {
+    color: rgba(203, 213, 225, 0.6);
+}
+
+.album-dec-icon {
+    padding-top: 20px;
+    font-size: 1.6rem;
+    position: relative;
+}
+.album-dec-icon i {
+    cursor: pointer;
+}
+
+.album-new {
+    cursor: pointer;
+    display: flex;
+    width: 200px;
+    height: 281px;
+    border-radius: 10px;
+    border: 1px dashed rgb(255, 255, 255);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    opacity: 0.6;
+}
+
+.album-new:hover {
+    opacity: 1;
+}
+
+.album-new i {
+    font-size: 3.5rem;
+    padding: 10px;
+}
+
+.infor-dec-drop {
+    margin: 0;
+    text-align: center;
+    width: 125px;
+    position: absolute;
+    bottom: 30px;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--text-dark);
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 5px;
+    display: none;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0);
+}
+
+.infor-dec-drop li {
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.infor-dec-drop li:hover {
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 15px 18px;
+    background-color: #002b41;
+}

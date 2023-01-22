@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>glimpse</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./assets/css/base.css">
+        <link rel="stylesheet" href="./assets/css/about.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="header grid">
+                <div class="logo">
+                    <h1><a href="./showcase.html">glimpse</a></h1>
+                </div>
+                <div class="profile-acc">
+                    <div class="sign-in">
+                        <a href="./sign_in.html"><i class="fa-regular fa-circle-user sign-icon"></i></a>
+                        <h2 class="sign-text"><a href="./sign_in.html">Sign In</a></h2>
+                    </div>
+                    <div class="sign-ined">
+                        <i class="fa-solid fa-plus sign-ined-icon" id="icon-add-image"></i>
+                        <i class="fa-solid fa-bell sign-ined-icon"></i>                            
+                        <div class="sign-ined-dropdown">
+                            <div class="sign-ined-avatar">
+                                <img src="./assets/image/user/avt2.jpg" alt="">
+                            </div>
+                            <i class="fa-solid fa-chevron-down sign-ined-drop"></i>
+                            <div class="sign-ined-droplist">
+                                <ul>
+                                    <a href="./profile.html"><li>Trang cá nhân</li></a>
+                                    <a href="./edit_profile.html"><li>Thông tin cá nhân</li></a>
+                                    <li class="sign-out-btn">Đăng xuất</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="infor-profile grid">
+                <div class="infor-title">
+                    <h1>Thông tin về website</h1>
+                    <p>Chào mừng đến với glimpse</p>
+                </div>
+                <div class="infor-dec">
+                    <div class="infor-dec-item">
+                        <h1>glimpse là gì?</h1>
+                        <p>glimpse là một trang web mạng xã hội chia sẻ hình ảnh và khám phá hình ảnh để chia sẻ 
+                            và tìm kiếm các ý tưởng như công thức thời trang, phong cảnh về nhà, phong cách, v.v.</p>
+                        <p>Với các hình ảnh trên glimpse, bạn có thể sẽ tìm thấy những ý tưởng để khơi nguồn cảm hứng. 
+                            Khi bạn phát hiện ra các hình ảnh mà bạn yêu thích, hãy lưu chúng để giữ cho ý tưởng 
+                            của bạn được ngăn nắp và dễ tìm. Bạn cũng có thể chia sẻ hình ảnh của mình với 
+                            những người khác trên glimpse.</p>                            
+                    </div>
+                    <div class="infor-dec-item">
+                        <h1>Tìm kiếm ý tưởng</h1>
+                        <p>Sử dụng chức năng tìm kiếm để tìm kiếm hình ảnh theo chủ đề. Khám phá các chủ đề 
+                            được đề xuất hoặc tìm kiếm các chủ đề của riêng bạn. Nhấn vào hồ sơ trên trang tìm kiếm 
+                            để khám phá những người sáng tạo, mọi người và thương hiệu dựa trên tìm kiếm của bạn.</p>                                                  
+                    </div>
+                    <div class="infor-dec-item">
+                        <h1>Thể hiện đam mê</h1>
+                        <p>....</p>
+                    </div>
+                    <div class="infor-dec-item">
+                        <h1>Lưu, album và đăng tải hình ảnh</h1>
+                        <p>Lưu là dấu trang mà mọi người sử dụng để lưu nội dung họ yêu thích trên glimpse.</p>                                                  
+                        <p>Khi thấy hình ảnh mà bạn yêu thích, hãy nhấp vào nút Lưu màu xanh để lưu chúng vào hồ sơ 
+                            của bạn hoặc có thể tạo Album để lưu trữ chúng vào Album riêng.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal">
+                <div class="modal_overlay"></div>
+
+                <div class="modal_body">
+                    <div class="modal_inner">
+                        <div class="modal_image">
+                            <div class="modal_border">
+                                <img src="" alt="" class="modal_border_img">
+                            </div>
+                        </div>     
+                        <div class="modal_type">
+                            <i class="fa-solid fa-x modal_icon_close"></i>                   
+                            <form action="" class="modal_form" id="modal_upload_form" enctype="multipart/form-data">                                
+                                <input type="file" name="link" id="inpFile" class="modal_input link">
+                                <input type="text" class="modal_input" placeholder="Tiêu đề" name="title">
+                                <textarea class="modal_textarea" placeholder="Giới thiệu về ảnh" name="description"></textarea>
+                                <input type="text" class="modal_input" placeholder="Chủ đề" name="genre">
+                                <button class="modal_button">Thêm</button>                            
+                            </form>    
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+
+            <a href="#">
+                <div class="scroll-top">
+                    <i class="fa-solid fa-arrow-up"></i>    
+                </div>
+            </a>   
+        </div>
+
+        <script src="./assets/js/about.js"></script>
+    </body>
+</html>

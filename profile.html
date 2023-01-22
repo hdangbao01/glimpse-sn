@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>glimpse</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./assets/css/base.css">
+        <link rel="stylesheet" href="./assets/css/profile.css">
+        <link rel="stylesheet" href="./assets/css/responsive/responsive_profile.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="header grid">
+                <div class="logo">
+                    <h1><a href="./showcase.html">glimpse</a></h1>
+                </div>
+                <div class="profile-acc">
+                    <div class="profile-acc-mana">
+                        <i class="fa-solid fa-plus sign-ined-icon" id="icon-add-image"></i>
+                        <i class="fa-solid fa-bell sign-ined-icon"></i>   
+                        <div class="sign-ined-dropdown">
+                            <div class="sign-ined-avatar">
+                                <img src="./assets/image/user/avt2.jpg" alt="">
+                            </div>
+                            <i class="fa-solid fa-chevron-down sign-ined-drop"></i>
+                            <div class="sign-ined-droplist">
+                                <ul>
+                                    <a href="./profile.html"><li>Trang cá nhân</li></a>
+                                    <a href="./edit_profile.html"><li>Thông tin cá nhân</li></a>
+                                    <li class="sign-out-btn">Đăng xuất</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile grid">
+                <div class="profile-avt">
+                    <div class="profile-avt-first">
+                        <img src="./assets/image/user/avt2.jpg" alt="">
+                        <h1>Ho Bao</h1>
+                    </div>
+                    <div class="profile-edit">
+                        <a href="/edit_profile.html">Edit Profile</a>
+                    </div>
+                </div>
+                <div class="profile-follow">
+                    <div class="profile-following">
+                        <i class="fa-solid fa-square-rss"></i>
+                        0 Following
+                    </div>
+                    <div class="profile-follower">
+                        <i class="fa-solid fa-square-person-confined"></i>
+                        0 Followers
+                    </div>                
+                </div>
+            </div>
+
+            <div class="select grid">
+                <div class="select-type">
+                    <div class="select-item select-item-up">
+                        <i class="fa-solid fa-upload"></i>
+                        Đăng tải
+                    </div>
+                    <div class="select-item select-item-save active">
+                        <i class="fa-solid select-item-save fa-floppy-disk"></i>
+                        Đã lưu
+                    </div>
+                    <div class="select-item select-item-album">
+                        <i class="fa-solid fa-images"></i>
+                        Album
+                    </div>
+                </div>
+                <div class="select-filter">
+                    <div class="select-filter-item">
+                        Mới nhất <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="album grid">
+                <div class="row row1">
+                    <div class="album-item columm-2_5">
+                        <img src="./assets/image/photo/index/ai2.png" alt="">
+                        <div class="album-dec">
+                            <div class="album-dec-icon">
+                                <i class="fa-solid fa-ellipsis album-dec-icon-action1"></i>
+                                <ul class="infor-dec-drop infor-dec-drop1">
+                                    <li>Delete</li>
+                                </ul>
+                            </div>                    
+                        </div>       
+                    </div>
+                </div>
+                <div class="row row2">
+                    <div class="album-item columm-2_5">
+                        <img src="./assets/image/photo/index/ai2.png" alt="">
+                        <div class="album-dec">
+                            <div class="album-dec-icon">
+                                <i class="fa-solid fa-ellipsis album-dec-icon-action2"></i>
+                                <ul class="infor-dec-drop infor-dec-drop2">
+                                    <li>Delete</li>
+                                </ul>
+                            </div>                    
+                        </div>       
+                    </div>
+                </div>
+                <div class="row row3">
+                    <div class="album-item columm-2_5">
+                        <img src="./assets/image/photo/index/ai5.jpg" alt="">
+                        <div class="album-dec">
+                            <div class="album-dec-info">
+                                <div class="album-dec-title">
+                                    <h1>Cyberpunk</h1>
+                                </div>
+                                <div class="album-dec-about">
+                                    <p class="album-dec-photo">1 photo</p>
+                                    <p class="album-dec-time">1 week</p>                        
+                                </div>
+                            </div>
+                            <div class="album-dec-icon">
+                                <i class="fa-solid fa-ellipsis album-dec-icon-action3"></i>
+                                <ul class="infor-dec-drop infor-dec-drop3">
+                                    <li>Delete</li>
+                                    <li>Rename</li>
+                                </ul>
+                            </div>                    
+                        </div>                
+                    </div>
+                    <div class="album-item columm-2_5">
+                        <div class="album-new">
+                            <i class="fa-solid fa-plus"></i>
+                            Album mới
+                        </div>                
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal">
+                <div class="modal_overlay"></div>
+
+                <div class="modal_body">
+                    <div class="modal_inner">
+                        <div class="modal_image">
+                            <div class="modal_border">
+                                <img src="" alt="" class="modal_border_img">
+                            </div>
+                        </div>     
+                        <div class="modal_type">
+                            <i class="fa-solid fa-x modal_icon_close"></i>                   
+                            <form action="upload_image.php" class="modal_form" id="modal_upload_form" enctype="multipart/form-data">                                
+                                <input type="file" name="link" id="inpFile" class="modal_input link">
+                                <input type="text" class="modal_input" placeholder="Tiêu đề" name="title">
+                                <textarea class="modal_textarea" placeholder="Giới thiệu về ảnh" name="description"></textarea>
+                                <input type="text" class="modal_input" placeholder="Chủ đề" name="genre">
+                                <button class="modal_button">Thêm</button>                            
+                            </form>    
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+
+            <a href="#">
+                <div class="scroll-top">
+                    <i class="fa-solid fa-arrow-up"></i>    
+                </div>
+            </a> 
+        </div>
+
+        <script src="./assets/js/profile.js"></script>            
+    </body>
+</html>
